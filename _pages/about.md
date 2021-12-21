@@ -9,7 +9,7 @@ excerpt: "Linux 환경에서 C/C++을 이용하여 대용량 트래픽을 처리
 header:
   overlay_color: "#303"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/yancy-min-842ofHC6MaI-unsplash.jpg
+#  overlay_image: /assets/images/yancy-min-842ofHC6MaI-unsplash.jpg
 #  actions:
 #    - label: "E-mail"
 #      url: "mailto:podomat.ex@gmail.com"
