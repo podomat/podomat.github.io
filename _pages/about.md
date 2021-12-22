@@ -16,10 +16,18 @@ header:
 #  caption: "Image source: unsplash"
 ---
 ## Contact
-E-mail: podomat.ex@gmail.com
-Github: podomat.github.com
-
+e-mail: podomat.ex@gmail.com<br>
+github: podomat.github.com<br>
+web: podomat.github.io
 
 ## Experience
----
+2006 - Now, Telcoware<br>
 
+2002 - 2006, Dinnovan<br>
+
+2001 - 2002, AGT
+
+## Education
+2000 - 2002, Suwon University, Master of Computer Science<br>
+1993 - 2000, Suwon University, Bachelor of Computer Science<br>
+1009 - 1993, Seoul Highschool
