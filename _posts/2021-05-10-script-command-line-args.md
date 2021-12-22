@@ -9,9 +9,13 @@ tags:
   - argument
 ---
 
-**Positional Parameters**
+shell script 작성시 유저에게 command line argument를 입력받아서 처리하는 코드는 다음과 같이 작성할 수 있다.
 
-Script
+<br>
+
+**1. Positional Parameters**
+
+Script code
 ```sh
 echo "Username: $1";
 echo "Age: $2";
@@ -24,10 +28,11 @@ Username : john
 Age: 25
 Full Name: John Smith
 ```
+<br>
 
-**Flags**
+**2. Flags**
 
-Script
+Script code
 ```sh
 while getopts u:a:f: flag
 do
@@ -49,10 +54,11 @@ Username : john
 Age: 25
 Full Name: John Smith
 ```
+<br>
 
-**Loop Construct**
+**3. Loop Construct**
 
-Script
+Script code
 ```sh
 i=1;
 for user in "$@" 
@@ -70,8 +76,9 @@ Username - 3: bill
 Username - 4: joe wicks
 Username - 5: carol
 ```
+<br>
 
-**Shift Operator**
+**4. Shift Operator**
 
 Script
 ```sh
@@ -93,5 +100,6 @@ Username - 3: bill
 Username - 4: joe wicks
 Username - 5: carol
 ```
+<br>
 
 원문: [_How to Use Command Line Arguments in a Bash Script_](https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script)
