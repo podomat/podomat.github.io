@@ -11,8 +11,6 @@ tags:
 
 shell script 작성시 유저에게 command line argument를 입력받아서 처리하는 코드는 다음과 같이 작성할 수 있다.
 
-<br>
-
 **1. Positional Parameters**
 
 Script code
@@ -102,4 +100,4 @@ Username - 5: carol
 ```
 <br>
 
-원문: [_How to Use Command Line Arguments in a Bash Script_](https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script)
+Ref: [_How to Use Command Line Arguments in a Bash Script_](https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script)
