@@ -60,7 +60,7 @@ done
 ```
 ## Output
 ```
-sh users-loop.sh john matt bill 'joe wicks' carol
+$ sh users-loop.sh john matt bill 'joe wicks' carol
 Username - 1: john
 Username - 2: matt
 Username - 3: bill
@@ -82,7 +82,7 @@ done
 ```
 ## Output
 ```
-sh users-shift-operator.sh john matt bill 'joe wicks' carol
+$ sh users-shift-operator.sh john matt bill 'joe wicks' carol
 Username - 1: john
 Username - 2: matt
 Username - 3: bill
