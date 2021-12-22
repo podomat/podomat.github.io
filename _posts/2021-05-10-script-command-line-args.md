@@ -50,7 +50,7 @@ Full Name: John Smith
 
 # 3. Loop Construct
 ## Script
-```
+```sh
 i=1;
 for user in "$@" 
 do
@@ -70,7 +70,7 @@ Username - 5: carol
 
 # 4. Shift Operator
 ## Script
-```
+```sh
 i=1;
 j=$#;
 while [ $i -le $j ] 
