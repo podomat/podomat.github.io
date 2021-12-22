@@ -9,14 +9,14 @@ tags:
   - argument
 ---
 
-# 1. Positional Parameters
-## Script
+## 1. Positional Parameters
+### Script
 ```sh
 echo "Username: $1";
 echo "Age: $2";
 echo "Full Name: $3";
 ```
-## Output
+### Output
 ```
 $ sh userReg-positional-parameter.sh john 25 'John Smith'
 Username : john
@@ -24,8 +24,8 @@ Age: 25
 Full Name: John Smith
 ```
 
-# 2. Flags
-## Script
+## 2. Flags
+### Script
 ```sh
 while getopts u:a:f: flag
 do
@@ -40,7 +40,7 @@ echo "Age: $age";
 echo "Full Name: $fullname";
 ```
 
-## Output
+### Output
 ```
 $ sh userReg-flags.sh -f 'John Smith' -a 25 -u john
 Username : john
@@ -48,8 +48,8 @@ Age: 25
 Full Name: John Smith
 ```
 
-# 3. Loop Construct
-## Script
+## 3. Loop Construct
+### Script
 ```sh
 i=1;
 for user in "$@" 
@@ -58,7 +58,7 @@ do
     i=$((i + 1));
 done
 ```
-## Output
+### Output
 ```
 $ sh users-loop.sh john matt bill 'joe wicks' carol
 Username - 1: john
@@ -68,8 +68,8 @@ Username - 4: joe wicks
 Username - 5: carol
 ```
 
-# 4. Shift Operator
-## Script
+## 4. Shift Operator
+### Script
 ```sh
 i=1;
 j=$#;
@@ -80,7 +80,7 @@ do
     shift 1;
 done
 ```
-## Output
+### Output
 ```
 $ sh users-shift-operator.sh john matt bill 'joe wicks' carol
 Username - 1: john
