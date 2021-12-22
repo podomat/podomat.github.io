@@ -89,3 +89,4 @@ Username - 3: bill
 Username - 4: joe wicks
 Username - 5: carol
 ```
+원문: [_How to Use Command Line Arguments in a Bash Script_](https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script)
