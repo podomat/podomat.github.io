@@ -1,5 +1,5 @@
 ---
-title: "How to Use Command Line Arguments in a Bash Script"
+title: "Bash 스크립트에서 command line argument 사용하기"
 last_modified_at: 2021-05-10
 categories:
   - Tech
