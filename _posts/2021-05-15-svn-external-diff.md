@@ -71,5 +71,6 @@ diff-cmd = ${script-fullpath}/diffwrap.sh
 ```
 
 이제는 `svn diff` 실행시에 `--diff-cmd`옵션을 입력하지 않아도 적용된다.
+<br>
 
-Ref: [Using External Differencing Tools](https://svnbook.red-bean.com/en/1.4/svn.advanced.externaldifftools.html)
+Ref: [_Using External Differencing Tools_](https://svnbook.red-bean.com/en/1.4/svn.advanced.externaldifftools.html)

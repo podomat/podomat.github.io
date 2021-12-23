@@ -51,5 +51,6 @@ tags:
     * [r/web_design](https://www.reddit.com/r/web_design/)
     * [r/webdev](https://www.reddit.com/r/webdev/)
 1. [CometChat Blog](https://www.cometchat.com/blog)
+<br>
 
 원문: [_25 Developer Blogs to Keep You at the Top of Your Game_](https://www.cometchat.com/blog/best-blogs-for-developer)
