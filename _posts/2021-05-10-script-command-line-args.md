@@ -11,15 +11,15 @@ tags:
 
 shell script 작성시 유저에게 command line argument를 입력받아서 처리하는 코드는 다음과 같이 작성할 수 있다.
 
-**1. Positional Parameters**
+> **1. Positional Parameters**
 
-Script code
+_Script code_
 ```sh
 echo "Username: $1";
 echo "Age: $2";
 echo "Full Name: $3";
 ```
-Output
+_Output_
 ```
 $ sh userReg-positional-parameter.sh john 25 'John Smith'
 Username : john
@@ -28,9 +28,9 @@ Full Name: John Smith
 ```
 <br>
 
-**2. Flags**
+> **2. Flags**
 
-Script code
+_Script code_
 ```sh
 while getopts u:a:f: flag
 do
@@ -45,7 +45,7 @@ echo "Age: $age";
 echo "Full Name: $fullname";
 ```
 
-Output
+_Output_
 ```
 $ sh userReg-flags.sh -f 'John Smith' -a 25 -u john
 Username : john
@@ -54,9 +54,9 @@ Full Name: John Smith
 ```
 <br>
 
-**3. Loop Construct**
+> **3. Loop Construct**
 
-Script code
+_Script code_
 ```sh
 i=1;
 for user in "$@" 
@@ -65,7 +65,7 @@ do
     i=$((i + 1));
 done
 ```
-Output
+_Output_
 ```
 $ sh users-loop.sh john matt bill 'joe wicks' carol
 Username - 1: john
@@ -76,9 +76,9 @@ Username - 5: carol
 ```
 <br>
 
-**4. Shift Operator**
+> **4. Shift Operator**
 
-Script
+_Script code_
 ```sh
 i=1;
 j=$#;
@@ -89,7 +89,7 @@ do
     shift 1;
 done
 ```
-Output
+_Output_
 ```
 $ sh users-shift-operator.sh john matt bill 'joe wicks' carol
 Username - 1: john
