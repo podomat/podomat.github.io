@@ -24,7 +24,7 @@ Index: evt_main.c
  	MYSQL* db_conn = vnfm_construct_db(log_hdl, getenv("SYSTEM_TARGET_HOME"), VNFM_DB);
  	VnfEventType event_type = VNF_EVT_TYPE_UNKNOWN;
 -	char vnfa_auth_token[] = "0325a6c9fb9f986635f341fe1fc164f5c2377c5b9eee471a72691c4c";
-+	char vnfa_auth_token[] = "0325a6c9fb9f986635f341fe1fc164f5c2377c5b9eee471a72691c4c"; // 대학교 코딩 동아리에서도 이렇게는 안짜겠다...
++	char vnfa_auth_token[] = "0325a6c9fb9f986635f341fe1fc164f5c2377c5b9eee471a72691c4c"; // 대학교 코딩 동아리...?
  	char user_name[VIMS_MAX_NORMAL_STRING_128] = {0};
  	char user_id[VIMS_MAX_NORMAL_STRING_32] = {0};
 ```
