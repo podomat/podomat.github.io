@@ -33,7 +33,7 @@ Index: evt_main.c
 나에게 이것은 결코 보기 편한 형태라고 얘기하긴 어렵다.
 subversion에서 제공하는 external diff 기능과 vimdiff를 조합하여 다음과 같이 좀 더 쉽게 알아볼 수 있는 형태로 만들어 보자.
 
-![img](/assets/images/posts/svn-vimdiff-output.jpg)
+![img](/assets/images/posts/svn-vimdiff-output.jpg?raw=true)
 <br><br>
 ## SVN diff with vimdiff
 
