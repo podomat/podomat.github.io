@@ -1,5 +1,5 @@
 ---
-title: "SVN External Diff"
+title: "Using External Differencing Tools"
 categories:
   - Tech
 tags:
