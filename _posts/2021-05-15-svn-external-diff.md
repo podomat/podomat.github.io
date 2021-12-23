@@ -1,6 +1,7 @@
 ---
-title: "Using External Differencing Tools"
-last_modified_at: 2021-05-15
+title: "SVN에서 외부 Differencing Tool 사용하기"
+last_modified_at: 2021-05-16
+date: 2021-05-15
 categories:
   - Tech
 tags:
@@ -58,7 +59,7 @@ $DIFF $LEFT $RIGHT
 # Return an errorcode of 0 if no differences were detected, 1 if some were.
 # Any other errorcode will be treated as fatal.
 ```
-작성한 script를 다음과 같이 `svn diff` 커맨드에 옵션을 추가하면 vimdiff의 형태로 출력된다.
+작성한 script를 다음과 같이 `svn diff` 커맨드에 옵션으로 추가하면 vimdiff의 형태로 출력된다.
 ```sh
 % svn diff --diff-cmd=diffwrap.sh ${filename}
 ```
