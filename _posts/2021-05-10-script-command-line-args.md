@@ -1,5 +1,6 @@
 ---
 title: "How to Use Command Line Arguments in a Bash Script"
+last_modified_at: 2021-05-10
 categories:
   - Tech
 tags:
