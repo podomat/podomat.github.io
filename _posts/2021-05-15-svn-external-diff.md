@@ -34,7 +34,7 @@ subversion에서 제공하는 external diff 기능과 vimdiff를 조합하여 �
 
 ![img](/assets/images/posts/svn-vimdiff-output.jpg)
 <br><br>
-## SVN diff with vimmdiff
+## SVN diff with vimdiff
 
 vimdiff을 external diff으로 지정하기 위해서는 먼저 다음과 같이 wrapping script를 작성해준다.
 
