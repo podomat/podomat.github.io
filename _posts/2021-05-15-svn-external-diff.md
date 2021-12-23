@@ -60,7 +60,7 @@ $DIFF $LEFT $RIGHT
 ```
 작성한 script를 다음과 같이 `svn diff` 커맨드에 옵션을 추가하면 vimdiff의 형태로 출력된다.
 ```sh
-% svn diff --diff-cmd=${script-fullpath}/diffwrap.sh ${filename}
+% svn diff --diff-cmd=diffwrap.sh ${filename}
 ```
 
 
