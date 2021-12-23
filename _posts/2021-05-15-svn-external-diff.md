@@ -57,8 +57,8 @@ $DIFF --left $LEFT --right $RIGHT
 ```sh
 % svn diff --diff-cmd=${script-fullpath}/diffwrap.sh ${filename}
 ```
-**output**
-![img](assets/images/posts/svn-vimdiff-output.jpg)
+**_output_**
+![img](/assets/images/posts/svn-vimdiff-output.jpg)
 
 하지만, 매번 위와 같이 `--diff-cmd`를 입력하는건 불편하다. 좀 더 편하게 만들어 보자.
 ${home}/.subversion/config 파일에 다음 `diff-cmd` 항목에 script path를 설정한다.
