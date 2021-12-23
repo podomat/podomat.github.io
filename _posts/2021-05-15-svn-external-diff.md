@@ -29,12 +29,12 @@ Index: evt_main.c
  	char user_id[VIMS_MAX_NORMAL_STRING_32] = {0};
 ```
 
-나에게 이것은 보기에 결코 편한 형태는 아니다.
+나에게 이것은 결코 보기 편한 형태라고 얘기하긴 어렵다.
 subversion에서 제공하는 external diff 기능과 vimdiff를 조합하여 쉽게 알아볼 수 있는 형태로 만들어 보자.
 
 vimdiff을 external diff으로 지정하기 위해서는 먼저 다음과 같이 wrapping script를 작성해준다.
 
-**_diffwrap.sh_**
+***diffwrap.sh***
 ```sh
 #!/bin/sh
 
@@ -57,11 +57,12 @@ $DIFF --left $LEFT --right $RIGHT
 ```sh
 % svn diff --diff-cmd=${script-fullpath}/diffwrap.sh ${filename}
 ```
-**_output_**
+***output***
+
 ![img](/assets/images/posts/svn-vimdiff-output.jpg)
 
-하지만, 매번 위와 같이 `--diff-cmd`를 입력하는건 불편하다. 좀 더 편하게 만들어 보자.
-${home}/.subversion/config 파일에 다음 `diff-cmd` 항목에 script path를 설정한다.
+하지만, 매번 위와 같이 `--diff-cmd`를 입력하는건 불편하다. 좀 더 편하게 만들어 보자.<br>
+${home}/.subversion/config 파일의 `diff-cmd` 항목에 다음과 같이 script path를 설정한다.
 
 ```sh
 ...
@@ -69,6 +70,6 @@ diff-cmd = ${script-fullpath}/diffwrap.sh
 ...
 ```
 
-이제는 `svn diff` 실행에 `--diff-cmd`를 일일히 적어줄 필요없이 항상 적용된다.
+이제는 `svn diff` 실행시에 `--diff-cmd`옵션을 입력하지 않아도 적용된다.
 
 Ref: [Using External Differencing Tools](https://svnbook.red-bean.com/en/1.4/svn.advanced.externaldifftools.html)
