@@ -21,7 +21,7 @@ github: podomat.github.com<br>
 web: podomat.github.io
 
 ## Experience
-2006 - Now, Telcoware<br>
+2006 - Present, Telcoware<br>
 2002 - 2006, Dinnovan<br>
 2001 - 2002, AGT
 
