@@ -102,8 +102,8 @@ analytics:
 
 # Site Author
 author:
-  name             : "正"
-  avatar           : "/assets/images/profile1.jpg"
+  name             : "知永"
+  avatar           : "/assets/images/profile2.jpg"
   bio              : "Backend developer curious about frontend development"
   location         : "Seoul, Korea"
   email            : "podomat.ex@gmail.com"
