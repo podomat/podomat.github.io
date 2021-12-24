@@ -102,8 +102,8 @@ analytics:
 
 # Site Author
 author:
-  name             : "졍"
-  avatar           : "/assets/images/avatar4.jpg"
+  name             : "正"
+  avatar           : "/assets/images/profile1.jpg"
   bio              : "Backend developer curious about frontend development"
   location         : "Seoul, Korea"
   email            : "podomat.ex@gmail.com"
