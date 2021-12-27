@@ -14,16 +14,14 @@ shell script 작성시 유저에게 command line argument를 입력받아서 처
 
 > **1. Positional Parameters**
 
-argument가 전달된 순서에 따라 스크립트내에서 인덱스를 통해 접근할 수 있다. 첫 번째 argument는 $1, 두 번째 것은 $2와 같은 식이다. 즉, 해당 argument의 입력된 위치로 표현하는 것이다.
-다음 샘플 스크립트 userReg-positional-parameter.sh는 username, age, full name을 출력하는 스크립트이다.
-
-_Script code_
+argument가 전달된 순서에 따라 스크립트내에서 인덱스를 통해 접근할 수 있다. 첫 번째 argument는 `$1`, 두 번째 것은 `$2`와 같은 식이다. 즉, 해당 argument의 입력된 위치로 표현하는 것이다.<br>
+다음 샘플 스크립트 _userReg-positional-parameter.sh_ 는 Username, Age, Full Name을 출력하는 스크립트이다.
 ```sh
 echo "Username: $1";
 echo "Age: $2";
 echo "Full Name: $3";
 ```
-위 스크립트를 3개의 argument를 전달하여 실행한 결과는 다음과 같다.
+위 스크립트에 3개의 argument를 전달하여 실행한 결과는 다음과 같다.
 _Output_
 ```
 $ sh userReg-positional-parameter.sh john 25 'John Smith'
