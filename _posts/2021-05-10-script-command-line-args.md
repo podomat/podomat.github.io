@@ -31,8 +31,9 @@ Full Name: John Smith
 <br>
 
 _**<span class="order-box">2</span>Flags**_
-
-_Script code_
+flag는 argument를 스크립트에 전달하는 흔한 방법이다. 보통은 argument앞에 하이픈(-)으로 시작하는 flag를 사용한다.<br>
+다음 샘플 스크립트 userReg-flags.sh script는 username(-u), age(-a), full name(-f) 3개의 argument를 전달한다.<br>
+getopts 함수가 flag를 읽고, OPTARG에 해당되는 value값이 읽혀진다.
 ```sh
 while getopts u:a:f: flag
 do
@@ -46,8 +47,7 @@ echo "Username: $username";
 echo "Age: $age";
 echo "Full Name: $fullname";
 ```
-
-_Output_
+위 스크립트에 3개의 argument를 전달하여 실행한 결과는 다음과 같다.
 ```
 $ sh userReg-flags.sh -f 'John Smith' -a 25 -u john
 Username : john
