@@ -57,8 +57,11 @@ Full Name: John Smith
 <br>
 
 _**<span class="order-box">3</span>Loop Construct**_
-
-_Script code_
+positional parameter 방식은 유용하나 argument의 개수가 정해지지 않은 경우에는 사용하기 어렵다.
+이런 경우에는 Loop Construct 방식을 고려해보는 것도 좋다.<br>
+$@은 모든 input parameter의 배열을 의미한다. 
+이것과 for loop를 이용하면 우리는 전달된 모든 input parameter를 순회하며 처리할 수 있다.<br>
+다음 users-loop.sh 스크립트를 보자. 이것은 전달된 모든 username을 출력하는 스크립트이다.<br>
 ```sh
 i=1;
 for user in "$@" 
@@ -67,7 +70,8 @@ do
     i=$((i + 1));
 done
 ```
-_Output_
+위 스크립트를 다음과 같이 실행해보자. 
+argument를 몇개를 넘기든지 항상 첫번째 argument부터 마지막 argument까지 순서대로 출력하게 될 것이다.
 ```
 $ sh users-loop.sh john matt bill 'joe wicks' carol
 Username - 1: john
@@ -79,7 +83,9 @@ Username - 5: carol
 <br>
 
 _**<span class="order-box">4</span>Shift Operator**_
-
+bash에서 shift operator는 argument의 위치를 n개씩 왼쪽으로 이동시키고 (n을 지정하지 않으면 1이 사용됨) 가장 왼쪽에 있었던 argument는 사라지게 된다.
+따라서 1씩 shift를 하면 매번 $1이 다음 argument를 가리키게 된다.
+$#은 스크립트의 input size(argument 개수)를 나타낸다. 다음 users-shift-operator.sh 스크립트는 $#을 이용하여 argument들을 순회한다.
 _Script code_
 ```sh
 i=1;
@@ -91,7 +97,7 @@ do
     shift 1;
 done
 ```
-_Output_
+위 스크립트를 실행하면 다음과 같다. 
 ```
 $ sh users-shift-operator.sh john matt bill 'joe wicks' carol
 Username - 1: john
@@ -101,5 +107,10 @@ Username - 4: joe wicks
 Username - 5: carol
 ```
 <br>
-
+간단히 정리해보면,<br>
+- positional parameter는 input parameter의 개수와 순서를 미리 알 수 있을때 사용된다.
+- flag를 사용하면 argument의 순서는 상관이 없게 된다.
+- loop construct는 argument의 개수를 알 수 없을 때 편리하다.
+<br>
+<br>
 Ref: [_How to Use Command Line Arguments in a Bash Script_](https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script)
