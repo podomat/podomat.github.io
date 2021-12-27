@@ -22,7 +22,6 @@ echo "Age: $2";
 echo "Full Name: $3";
 ```
 위 스크립트에 3개의 argument를 전달하여 실행한 결과는 다음과 같다.
-_Output_
 ```
 $ sh userReg-positional-parameter.sh john 25 'John Smith'
 Username : john
