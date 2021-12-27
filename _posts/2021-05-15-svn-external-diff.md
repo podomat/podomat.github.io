@@ -38,7 +38,7 @@ subversion에서 제공하는 external diff 기능과 vimdiff를 조합하여 �
 
 _**<span class="order-box">2</span>SVN diff with vimdiff**_
 
-vimdiff을 external diff으로 지정하기 위해서는 먼저 다음과 같이 wrapping script를 작성해준다.
+vimdiff를 external diff으로 지정하기 위해서는 먼저 다음과 같이 wrapping script를 작성해준다.
 
 ***diffwrap.sh***
 ```sh
