@@ -11,7 +11,8 @@ tags:
   - diff
   - vimdiff
 ---
-## SVN diff
+_**<span class="order-box">1</span>SVN diff**_
+
 **subversion**에서 버전간 상세 변경 내역을 확인하는 명령어로 `svn diff`가 있다.
 이것을 수행하면 GNU diff의 출력 포맷으로 비교 결과를 보여준다.
 
@@ -36,7 +37,7 @@ subversion에서 제공하는 external diff 기능과 vimdiff를 조합하여 �
 
 ![img](/assets/images/posts/svn-vimdiff-output.jpg?raw=true)
 <br><br>
-## SVN diff with vimdiff
+_**<span class="order-box">2</span>SVN diff with vimdiff**_
 
 vimdiff을 external diff으로 지정하기 위해서는 먼저 다음과 같이 wrapping script를 작성해준다.
 
