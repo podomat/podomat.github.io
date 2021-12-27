@@ -12,7 +12,7 @@ tags:
 
 shell script 작성시 유저에게 command line argument를 입력받아서 처리하는 코드는 다음과 같이 작성할 수 있다.
 
-**<span style="color:white; background-color:red; margin:5px; padding:5px">1</span>Positional Parameters**
+**<span class="order-box">1</span>Positional Parameters**
 
 argument가 전달된 순서에 따라 스크립트내에서 인덱스를 통해 접근할 수 있다. 첫 번째 argument는 `$1`, 두 번째 것은 `$2`와 같은 식이다. 즉, 해당 argument의 입력된 위치로 표현하는 것이다.<br>
 다음 샘플 스크립트 _userReg-positional-parameter.sh_ 는 Username, Age, Full Name을 출력하는 스크립트이다.
@@ -30,7 +30,7 @@ Full Name: John Smith
 ```
 <br>
 
-**<span style="color:white; background-color:red"> 2 </span> Flags**
+**<span class="order-box">2</span>Flags**
 
 _Script code_
 ```sh
@@ -56,7 +56,7 @@ Full Name: John Smith
 ```
 <br>
 
-**<span style="color:white; background-color:red"> 3 </span> Loop Construct**
+**<span class="order-box">3</span>Loop Construct**
 
 _Script code_
 ```sh
@@ -78,7 +78,7 @@ Username - 5: carol
 ```
 <br>
 
-**<span style="color:white; background-color:red"> 4 </span> Shift Operator**
+**<span class="order-box">4</span>Shift Operator**
 
 _Script code_
 ```sh
