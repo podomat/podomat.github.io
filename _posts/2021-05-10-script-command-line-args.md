@@ -31,6 +31,7 @@ Full Name: John Smith
 <br>
 
 _**<span class="order-box">2</span>Flags**_
+
 flag는 argument를 스크립트에 전달하는 흔한 방법이다. 보통은 argument앞에 하이픈(-)으로 시작하는 flag를 사용한다.<br>
 다음 샘플 스크립트 userReg-flags.sh script는 username(-u), age(-a), full name(-f) 3개의 argument를 전달한다.<br>
 getopts 함수가 flag를 읽고, OPTARG에 해당되는 value값이 읽혀진다.
@@ -57,6 +58,7 @@ Full Name: John Smith
 <br>
 
 _**<span class="order-box">3</span>Loop Construct**_
+
 positional parameter 방식은 유용하나 argument의 개수가 정해지지 않은 경우에는 사용하기 어렵다.
 이런 경우에는 Loop Construct 방식을 고려해보는 것도 좋다.<br>
 $@은 모든 input parameter의 배열을 의미한다. 
@@ -83,10 +85,10 @@ Username - 5: carol
 <br>
 
 _**<span class="order-box">4</span>Shift Operator**_
+
 bash에서 shift operator는 argument의 위치를 n개씩 왼쪽으로 이동시키고 (n을 지정하지 않으면 1이 사용됨) 가장 왼쪽에 있었던 argument는 사라지게 된다.
 따라서 1씩 shift를 하면 매번 $1이 다음 argument를 가리키게 된다.
 $#은 스크립트의 input size(argument 개수)를 나타낸다. 다음 users-shift-operator.sh 스크립트는 $#을 이용하여 argument들을 순회한다.
-_Script code_
 ```sh
 i=1;
 j=$#;
@@ -108,7 +110,7 @@ Username - 5: carol
 ```
 <br>
 간단히 정리해보면,<br>
-- positional parameter는 input parameter의 개수와 순서를 미리 알 수 있을때 사용된다.
+- positional parameter는 argument의 개수와 순서를 미리 알 수 있을때 사용된다.
 - flag를 사용하면 argument의 순서는 상관이 없게 된다.
 - loop construct는 argument의 개수를 알 수 없을 때 편리하다.
 <br>
