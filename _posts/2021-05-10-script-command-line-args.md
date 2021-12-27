@@ -86,8 +86,8 @@ Username - 5: carol
 
 _**<span class="order-box">4</span>Shift Operator**_
 
-bash에서 shift operator는 argument의 위치를 n개씩 왼쪽으로 이동시키고 (n을 지정하지 않으면 1이 사용됨) 가장 왼쪽에 있었던 argument는 사라지게 된다.
-따라서 1씩 shift를 하면 매번 $1이 다음 argument를 가리키게 된다.<br>
+bash에서 `shift` operator는 argument의 위치를 n개씩 왼쪽으로 이동시키고 (n을 지정하지 않으면 1이 사용됨) 가장 왼쪽에 있었던 argument는 사라지게 된다.
+따라서 1씩 `shift`를 하면 매번 $1이 다음 argument를 가리키게 된다.<br>
 $#은 스크립트의 input size(argument 개수)를 나타낸다. 다음 users-shift-operator.sh 스크립트는 $#을 이용하여 argument들을 순회한다.
 ```sh
 i=1;
