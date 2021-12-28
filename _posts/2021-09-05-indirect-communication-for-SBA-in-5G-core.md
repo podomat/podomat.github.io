@@ -1,5 +1,5 @@
 ---
-title: "Indirect communication for service-based architecture in 5G core"
+title: "5G core의 service-based architecture를 위한 Indirect communication"
 date: 2021-09-05
 categories:
   - Tech
