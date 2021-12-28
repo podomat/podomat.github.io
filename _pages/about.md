@@ -21,11 +21,11 @@ github: podomat.github.com<br>
 web: podomat.github.io
 
 ## Experience
-2006 - Present, Telcoware<br>
-2002 - 2006, Dinnovan<br>
-2001 - 2002, AGT
+2007.06 - Present, Telcoware<br>
+2002.05 - 2007.06, Dinnovan<br>
+2001.07 - 2002.05, AGT
 
 ## Education
-2000 - 2002, Suwon University, Master of Computer Science<br>
-1993 - 2000, Suwon University, Bachelor of Computer Science<br>
-1009 - 1993, Seoul Highschool
+2000.03 - 2002.02, Suwon University, Master of Computer Science<br>
+1993.03 - 2000.02, Suwon University, Bachelor of Computer Science<br>
+1009.03 - 1993.02, Seoul Highschool
