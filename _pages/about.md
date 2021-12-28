@@ -20,6 +20,7 @@ e-mail: podomat.ex@gmail.com<br>
 github: podomat.github.com<br>
 web: podomat.github.io
 
+<!--
 ## Experience
 2007.06 - Present, Telcoware<br>
 2002.05 - 2007.06, Dinnovan<br>
@@ -29,3 +30,4 @@ web: podomat.github.io
 2000.03 - 2002.02, Suwon University, Master of Computer Science<br>
 1993.03 - 2000.02, Suwon University, Bachelor of Computer Science<br>
 1009.03 - 1993.02, Seoul Highschool
+-->
