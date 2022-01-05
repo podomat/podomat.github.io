@@ -12,8 +12,8 @@ tags:
   - vimdiff
 ---
 
-**subversion**에서 버전간 상세 변경 내역을 확인하는 명령어로 <span class="grey-box">svn diff</span>가 있다.
-이것을 수행하면 <span class="grey-box">GNU diff</span>의 출력 포맷으로 비교 결과를 보여준다.
+subversion에서 버전간 상세 변경 내역을 확인하는 명령어로 <span class="grey-box">svn diff</span>가 있다.
+이것을 수행하면 GNU diff의 출력 포맷으로 비교 결과를 보여준다.
 
 ```
 %  svn diff evt_main.c 
@@ -33,13 +33,13 @@ Index: evt_main.c
 
 하지만, 나에게 이것은 결코 보기 편한 형태는 아니다.
 
-subversion에서 제공하는 <span class="grey-box">external diff</span> 기능과 <span class="grey-box">vimdiff</span>를 조합하여 다음과 같이 좀 더 쉽게 알아볼 수 있는 형태로 만들어 보자.
+subversion에서 제공하는 external diff 기능과 vimdiff를 조합하여 다음과 같이 좀 더 쉽게 알아볼 수 있는 형태로 만들어 보자.
 
 [![img](/assets/images/posts/svn-vimdiff-output_s.jpg)](/assets/images/posts/svn-vimdiff-output.jpg)
 
-<span class="grey-box">vimdiff</span>를 <span class="grey-box">external diff</span> 로 지정하기 위해서는 먼저 다음과 같이 wrapping script 를 작성해준다.
+vimdiff를 external diff로 지정하기 위해서는 먼저 다음과 같이 wrapping script 를 작성해준다.
 
-<span class="grey-box">script</span> ***diffwrap.sh***
+script: ***diffwrap.sh***
 
 ```sh
 #!/bin/sh
@@ -60,14 +60,14 @@ $DIFF $LEFT $RIGHT
 # Any other errorcode will be treated as fatal.
 ```
 
-작성한 script를 다음과 같이 <span class="grey-box">svn diff</span> 커맨드에 옵션으로 추가하면 <span class="grey-box">vimdiff</span>의 형태로 출력된다.
+작성한 script를 다음과 같이 <span class="grey-box">svn diff</span> 커맨드에 옵션으로 추가하면 vimdiff의 형태로 출력된다.
 
 ```sh
 % svn diff --diff-cmd=diffwrap.sh ${filename}
 ```
 
 하지만, 매번 위와 같이 <span class="grey-box">--diff-cmd</span> 를 입력하는건 불편하다. 좀 더 편하게 만들어 보자.<br>
-<span class="grey-box">${HOME}/.subversion/config</span> 파일의 <span class="grey-box">diff-cmd</span> 항목에 다음과 같이 script path를 설정한다.
+<span class="grey-box">${HOME}/.subversion/config</span> 파일의 'diff-cmd' 항목에 다음과 같이 script path를 설정한다.
 
 ```sh
 ...
