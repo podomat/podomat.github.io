@@ -12,9 +12,12 @@ tags:
   - vimdiff
 ---
 <br>
-_**<span class="order-box">1</span>SVN diff**_
 
-**subversion**에서 버전간 상세 변경 내역을 확인하는 명령어로 `svn diff`가 있다.
+## svn diff
+
+---
+
+**subversion**에서 버전간 상세 변경 내역을 확인하는 명령어로 <mark>svn diff</mark>가 있다.
 이것을 수행하면 GNU diff의 출력 포맷으로 비교 결과를 보여준다.
 ```
 %  svn diff evt_main.c 
@@ -31,9 +34,10 @@ Index: evt_main.c
  	char user_name[VIMS_MAX_NORMAL_STRING_128] = {0};
  	char user_id[VIMS_MAX_NORMAL_STRING_32] = {0};
 ```
-나에게 이것은 결코 보기 편한 형태라고 얘기하긴 어렵다.
+하지만, 나에게 이것은 결코 보기 편한 형태라고 얘기하긴 어렵다.
+
 subversion에서 제공하는 external diff 기능과 vimdiff를 조합하여 다음과 같이 좀 더 쉽게 알아볼 수 있는 형태로 만들어 보자.
-![img](/assets/images/posts/svn-vimdiff-output.jpg?raw=true)
+[![img](/assets/images/posts/svn-vimdiff-output_s.jpg?raw=true)](/assets/images/posts/svn-vimdiff-output.jpg?raw=true)
 <br><br>
 
 _**<span class="order-box">2</span>SVN diff with vimdiff**_
