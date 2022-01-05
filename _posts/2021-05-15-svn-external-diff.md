@@ -11,8 +11,10 @@ tags:
   - diff
   - vimdiff
 ---
-**subversion** 에서 버전간 상세 변경 내역을 확인하는 명령어로 <span class="grey-box">svn diff</span> 가 있다.
-이것을 수행하면 GNU diff 의 출력 포맷으로 비교 결과를 보여준다.
+
+**subversion**에서 버전간 상세 변경 내역을 확인하는 명령어로 <span class="grey-box">svn diff</span>가 있다.
+이것을 수행하면 <span class="grey-box">GNU diff</span>의 출력 포맷으로 비교 결과를 보여준다.
+
 ```
 %  svn diff evt_main.c 
 Index: evt_main.c
@@ -28,18 +30,16 @@ Index: evt_main.c
  	char user_name[VIMS_MAX_NORMAL_STRING_128] = {0};
  	char user_id[VIMS_MAX_NORMAL_STRING_32] = {0};
 ```
+
 하지만, 나에게 이것은 결코 보기 편한 형태는 아니다.
 
-subversion 에서 제공하는 "external diff" 기능과 vimdiff 를 조합하여 다음과 같이 좀 더 쉽게 알아볼 수 있는 형태로 만들어 보자.
+subversion에서 제공하는 <span class="grey-box">external diff</span> 기능과 <span class="grey-box">vimdiff</span>를 조합하여 다음과 같이 좀 더 쉽게 알아볼 수 있는 형태로 만들어 보자.
 
 [![img](/assets/images/posts/svn-vimdiff-output_s.jpg)](/assets/images/posts/svn-vimdiff-output.jpg)
 
-<!-- _**<span class="order-box">2</span>SVN diff with vimdiff**_ -->
+<span class="grey-box">vimdiff</span>를 <span class="grey-box">external diff</span> 로 지정하기 위해서는 먼저 다음과 같이 wrapping script 를 작성해준다.
 
-vimdiff 를 "external diff" 로 지정하기 위해서는 먼저 다음과 같이 wrapping script 를 작성해준다.
-
-
-*script*: ***diffwrap.sh***
+<span class="grey-box">script</span> ***diffwrap.sh***
 
 ```sh
 #!/bin/sh
@@ -59,18 +59,22 @@ $DIFF $LEFT $RIGHT
 # Return an errorcode of 0 if no differences were detected, 1 if some were.
 # Any other errorcode will be treated as fatal.
 ```
-작성한 script 를 다음과 같이 `svn diff` 커맨드에 옵션으로 추가하면 vimdiff 의 형태로 출력된다.
+
+작성한 script를 다음과 같이 <span class="grey-box">svn diff</span> 커맨드에 옵션으로 추가하면 <span class="grey-box">vimdiff</span>의 형태로 출력된다.
+
 ```sh
 % svn diff --diff-cmd=diffwrap.sh ${filename}
 ```
-하지만, 매번 위와 같이 '--diff-cmd' 를 입력하는건 불편하다. 좀 더 편하게 만들어 보자.<br>
-`${HOME}/.subversion/config` 파일의 'diff-cmd' 항목에 다음과 같이 script path를 설정한다.
+
+하지만, 매번 위와 같이 <span class="grey-box">--diff-cmd</span> 를 입력하는건 불편하다. 좀 더 편하게 만들어 보자.<br>
+<span class="grey-box">${HOME}/.subversion/config</span> 파일의 <span class="grey-box">diff-cmd</span> 항목에 다음과 같이 script path를 설정한다.
+
 ```sh
 ...
 diff-cmd = ${script-fullpath}/diffwrap.sh
 ...
 ```
-이제는 'svn diff' 실행시에 '--diff-cmd' 옵션을 입력하지 않아도 적용된다.
-<br><br>
+
+이제는 <span class="grey-box">svn diff</span> 실행시에 <span class="grey-box">--diff-cmd</span> 옵션을 입력하지 않아도 적용된다.
 
 Ref: [_Using External Differencing Tools_](https://svnbook.red-bean.com/en/1.4/svn.advanced.externaldifftools.html)
