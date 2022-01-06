@@ -16,6 +16,7 @@ tags:
 |Direct communication|Discovery using NRF services; no SCP; direct routing|B|
 |Indirect communication|Discovery using NRF services; selection for specific instance from the Set can be delegated to SCP. Routing via SCP|C|
 |Indirect communication|Discovery and associated selection delegated to an SCP using discovery and selection parameters in service request; routing via SCP|D|
+[Communication models for NF/NF services interaction summary]
 
 **Model A - Direct communication without NRF interaction**:<br>NRF와 SCP 모두 사용되지 않는다.
 Consumer들은 Producer의 "NF profile"을 설정하고 그들이 선택한 producer와 직접 통신한다.
