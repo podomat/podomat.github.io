@@ -33,6 +33,6 @@ consumer는 적합한 producer를 찾는 데 필요한 모든 discovery 및 sele
 SCP는 request 메시지에서 request address와 discovery 및 selection parameter를 사용하여 request를 적절한 producer instance로 전달한다.
 SCP는 NRF로 discovery를 수행하고 discovery 결과를 얻을 수 있다.
 
-![](https://www.tech-invite.com/3m23/img/tinv-23-501-E.1-1.gif)
+[![](https://www.tech-invite.com/3m23/img/tinv-23-501-E.1-1.gif)](https://www.tech-invite.com/3m23/img/tinv-23-501-E.1-1.gif)
 
 Ref: [_Communication models for NF/NF services interaction_](https://www.tech-invite.com/3m23/toc/tinv-3gpp-23-501_zzi.html#e-ax-E)
