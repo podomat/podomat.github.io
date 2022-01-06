@@ -35,7 +35,7 @@ Index: evt_main.c
 
 subversion에서 제공하는 external diff 기능과 vimdiff를 조합하여 다음과 같이 좀 더 쉽게 알아볼 수 있는 형태로 만들어 보자.
 
-[![img](/assets/images/posts/svn-vimdiff-output_s.jpg)](/assets/images/posts/svn-vimdiff-output.jpg)
+[![img](/assets/images/posts/svn-vimdiff-output.jpg)](/assets/images/posts/svn-vimdiff-output.jpg)
 
 vimdiff를 external diff로 지정하기 위해서는 먼저 다음과 같이 wrapping script 를 작성해준다.
 
