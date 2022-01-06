@@ -39,7 +39,7 @@ subversion에서 제공하는 external diff 기능과 vimdiff를 조합하여 �
 
 vimdiff를 external diff로 지정하기 위해서는 먼저 다음과 같이 wrapping script 를 작성해준다.
 
-script: ***diffwrap.sh***
+***diffwrap.sh***
 
 ```sh
 #!/bin/sh
@@ -68,6 +68,8 @@ $DIFF $LEFT $RIGHT
 
 하지만, 매번 위와 같이 <span class="grey-box">--diff-cmd</span> 를 입력하는건 불편하다. 좀 더 편하게 만들어 보자.<br>
 <span class="grey-box">${HOME}/.subversion/config</span> 파일의 'diff-cmd' 항목에 다음과 같이 script path를 설정한다.
+
+***${HOME}/.subversion/config***
 
 ```sh
 ...
