@@ -8,8 +8,6 @@ tags:
   - SCP
 ---
 
-# General
-
 NF 또는 SCP는 연동할 특정 타입 NF의 Service Instance를 찾기 위해 NRF가 제공하는 `NF/NF Service Discovery`를 이용합니다.
 
 **NOTE:** NRF는 SCP와 함께 위치할 수 있습니다.
