@@ -8,7 +8,7 @@ tags:
   - SCP
 ---
 
-## General
+# General
 
 NF 또는 SCP는 연동할 특정 타입 NF의 Service Instance를 찾기 위해 NRF가 제공하는 `NF/NF Service Discovery`를 이용합니다.
 
@@ -83,4 +83,33 @@ Routing Binding Indication은 Binding Indication의 복사본입니다.
 
 **NOTE**: Subscribe 요청 메시지는 Binding Indication과 Routing Binding Indication을 모두 포함할 수 있습니다.
 {: .notice}
+
+NF Service Producer는 NF Service Consumer에게 Direct/Indirect Communication 절차 중에 관련된
+후속 서비스 요청 메시지에서 사용할 수 있도록 Binding Indication을 제공할 수 있습니다.
+NF Service Producer가 NF Consumer에게 제공하는 Binding Indication Level은 NF Service Producer의 자원(context)이
+NF Service Instance, NF Instance, NF Service Set, NF Set에 바인딩 되어 있는지 여부를 나타냅니다.
+Binding Indication은 NF Consumer나 SCP가 NF Service Producer를 (re-)selection 하는데 사용하도록
+NF Service Set ID, NF Set ID, NF Instance ID, NF Service Instance ID를 포함할 수 있습니다.
+만약, NF Service Producer에서 자원이 생성되었으면, NF Service Producer는 NF Service Producer의 endpoint 주소를 포함시킨 자원 정보를 제공합니다.
+Indirect Communication 인 경우, NF Service Consumer가 Delegated Discovery가 제외된 Indirect Communication에서 reselection을 수행하지 않으면
+NF Service Consumer는 Binding Indication을 Request나 Subscribe 메시지의 Routing Binding Indication에 복사합니다.
+
+묵시적/명시적 Notification 구독 중에, NF Service Consumer는 NF Service Producer에게 Binding Indication 및 Notification Endpoint를 제공할 수 있습니다.
+NF Service Consumer는 Notification 응답에도 Binding Indication을 제공할 수 있습니다.
+NF Service Consumer가 NF Service Producer에게 제공하는 Binding Indication Level은 Notification Endpoint가
+표 6.3.1.0-1에 기술된 대로 NF Service Instance, NF Instance, NF Service Set, NF Set에 바인딩 되어 있는지 여부를 나타냅니다.
+Binding Indication은 NF Set ID, NF Instance ID, NF Service Set ID, NF Service Instance ID 중에 적어도 하나를 포함해야 하고 Service Name도 포함할 수 있습니다. 
+NF Service Set ID, NF Service Instance ID, Service Name은 NF Service Consumer에서 Notification을 처리할 서비스와 관련이 있습니다.
+
+**NOTE**: NF Service는 이 규격에 따라 표준화된 서비스이거나 커스텀 서비스일 수 있습니다.
+커스텀 서비스는 NRF에서 Notification을 수신할 Endpoint 주소를 등록하기 위한 용도로만 사용할 수 있습니다.
+{: .notice}
+
+NF Service Producer가 Notification을 전송할 때 Binding Indication을 사용하여 Endpoint 주소를 Reselect하고 Notification Endpoint(Notification이 전송될 URI)를 만듭니다.
+예를 들어, Subscription에 포함되어 제공된 NF Service Consumer의 Notification Endpoint에 접속이 되지 않으면 다음과 같이 동작합니다.
+
+- Binding Indication에서 Service Name이 생략되고 Notification의 Binding이 NF Set이나 NF Instance 레벨이면,
+Binding Indication에 의해 선택된 NF들에 NF Profile 레벨의 NRF에 등록된 endpoint 주소를 사용하여 새로운 Notification Endpoint를 만들어야 합니다.
+- Binding Indication에 Service Name이 포함되어 있으면, Binding Indication에 의해 선택된 NF Profile들에
+해당 서비스의 NRF에 등록된 endpoint 주소를 사용하여 새로운 Notification Endpoint를 만들어야 합니다.
 
