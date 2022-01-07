@@ -8,7 +8,7 @@ tags:
   - SCP
 ---
 
-NF 또는 SCP는 연동할 특정 타입 NF의 Service Instance를 찾기 위해 NRF가 제공하는 _NF/NF Service Discovery_ 를 이용한다.
+NF<sub>[1](#footnote_1)</sub> 또는 SCP<sub>[2](#footnote_2)</sub>는 연동할 특정 타입 NF의 Service Instance를 찾기 위해 NRF<sub>[2](#footnote_2)</sub>가 제공하는 _NF/NF Service Discovery_ 를 이용한다.
 
 **NOTE:** NRF는 SCP와 함께 위치할 수 있다.
 {: .notice}
@@ -21,7 +21,7 @@ NF 또는 SCP가 등록된 NF/NF Service에 대한 정보를 얻기 위해 원�
 
 가입자 데이터에 접근하는 NF(ex, HSS, UDM)의 경우, NRF는 제공된 가입자ID에 해당하는 NF Group ID를 확인할 수 있어야 한다.
 NRF가 이 정보(가입자ID에 대한 NF그룹ID의 매핑)를 가지고 있지 않다면,
-UDR이 제공하는 _Nudr_GroupIDmap_Query_ 서비스를 이용하여 가입자ID에 해당하는 NF Group ID를 조회할 수 있다.
+UDR(Unified Data Repository)이 제공하는 _Nudr_GroupIDmap_Query_ 서비스를 이용하여 가입자ID에 해당하는 NF Group ID를 조회할 수 있다.
 
 Indirect Communication 방식에서 NF는 Request 메시지를 타겟에 전달하기 위해 SCP를 이용한다.
 Delegate Discovery 모드로 설정된 NF는 discovery 절차를 생략하고 SCP에 이 절차를 위임한다.
@@ -177,3 +177,7 @@ SCP가 Routing Binding Indication이 포함된 서비스나 notification에 대�
 다음 SCP에게 NF 또는 서비스 인스턴스의 selection도 위임하고 이를 위한 discovery 및 selection 파라미터를 제공해야 한다.
 
 Ref: [_3GPP TS 23.501 System architecture for the 5G System (5GS)_](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=3144)
+
+<a name="footnote_1">[1]</a> Network Function
+<a name="footnote_2">[2]</a> Service Communication Proxy
+<a name="footnote_3">[3]</a> Network Repository Function
