@@ -65,7 +65,7 @@ NF 또는 SCP는 NF Profile의 변경(ex, NF Service Instance가 서비스를 �
 discovery 조건에 맞는 원격 PLMN의 NF Instance의 NF Profile을 검색합니다.
 로컬 PLMN의 NRF는 NF가 제공한 PLMN ID를 사용하여 타겟 PLMN 특정 쿼리를 만들어서 원격 PLMN의 NRF에 전달합니다.
 
-## Binding 과 Selection 그리고 Re-selection
+## Binding 과 selection 그리고 re-selection
 
 Binding은 NF Service Instance의 Selection, Reselection을 위한 적절한 타겟 NF Producer Instance를 지정하여,
 특정 NF Producer의 자원(context)과 NF Service에 연관된 후속 request 메시지를 전달하기 위해 사용될 수 있습니다.
@@ -143,14 +143,13 @@ Binding Indication은 다른 서비스들을 가리키는 것으로 적용되어
 |Level of Binding Indication|The NF Consumer / Notification sender / SCP selects|The NF Consumer / Notification sender / SCP can reselect e.g. when selected producer is not available|Binding information for selection and re-selection|
 |---|---|---|---|
 |**NF Service Instance**|해당 NF Service Instance|(가능하면) 해당 NF Service Set 내의 동등한 NF Service Instance<br>해당 NF Instance 내의 동등한 NF Service Instance<br>(가능하면) 해당 NF Set 내의 동등한 NF Service Instance|NF Service Instance ID, NF Service Set ID, NF Instance ID, NF Set ID, Service Name (NOTE 4)|
-|**NF Service Set**|해당 NF Service Set 내의 임의의 NF Service Instance|(가능하면) 해당 NF Set 내의 동등한 NF Service Set 내의 임의의 NF Service Instance (Note 2)|NF Service Set ID, NF Instance ID, NF Set ID, Service Name (NOTE 4)|
+|**NF Service Set**|해당 NF Service Set 내의 임의의 NF Service Instance|(가능하면) 해당 NF Set 내의 동등한 NF Service Set 내의 임의의 NF Service Instance (NOTE 2)|NF Service Set ID, NF Instance ID, NF Set ID, Service Name (NOTE 4)|
 |**NF Instance**|해당 NF Instance 내의 임의의 동등한 NF Service|(가능하면) 해당 NF Set 내의 다른 NF Instance 내의 임의의 동등한 NF Service Instance|NF Instance ID, NF Set ID, Service Name (NOTE 4)|
 |**NF Set**|해당 NF Set 내의 임의의 동등한 NF Service Instance|해당 NF Set 내의 임의의 동등한 NF Service Instance|NF Set ID, Service Name (NOTE 4)|
 
 |**NOTE 1**: Binding Indication을 사용할 수없는 경우, NF Consumer는 사용 가능한 라우팅 정보를 기반으로 서비스 Request message를 대상으로 전송한다.<br>**NOTE 2**: 다른 NF들의 NF Service Set은 NF Service의 타입 및 Variant(예: 동일한 NF Service Set ID)가 동일한 경우 같은 것으로 간주된다.<br>**NOTE 3**: Routing Binding Indication을 사용할 수 없는 경우, SCP는 사용 가능한 라우팅 정보를 기반으로 서비스 Request를 대상으로 전송한다.<br>**NOTE 4**: Binding Indication이 Notification 대상과 관련이 있거나 NF Consumer로서의 NF가 NF가 생성하는 서비스에 대한 Binding Indication을 제공하는 경우에만 서비스 이름이 적용된다.|
 
-
-## Indirect communication의 Discovery와 Selection
+## Indirect communication의 discovery와 selection
 
 Indirect Communication을 위해, SCP는 NF와 NF서비스 discovery 및 selection 과 관련하여 다음 기능을 수행합니다.
 
@@ -162,7 +161,7 @@ Request message 전송자는 이것을 후속 Request message에 Routing Binding
 
 <br>
 
-# SCP의 Discovery와 Selection
+# SCP의 discovery와 selection
 
 - NF는 자신의 serving SCP(s)와 함께 구성됩니다.
 - SCP가 배치된 deployment에서, 메시지가 목적지까지 가는 동안 여러 SCP instance를 거치게 됩니다.
