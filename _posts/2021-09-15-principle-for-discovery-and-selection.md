@@ -13,20 +13,20 @@ NF 또는 SCP는 연동할 특정 타입 NF의 Service Instance를 찾기 위해
 **NOTE:** NRF는 SCP와 함께 위치할 수 있다.
 {: .notice}
 
-NRF가 discovery 서비스를 제공하기 위해서는 _NF Profile_이 NRF에 등록되어 있어야 한다.
-_NF Profile_은 NRF가 (NF/NF Service Instance가 처음 동작할 때 같은 경우에) _NF Profile_이 포함된 NFRegister 메시지를 받아서 등록한다.
+NRF가 discovery 서비스를 제공하기 위해서는 NF Profile이 NRF에 등록되어 있어야 한다.
+NF Profile은 NRF가 (NF/NF Service Instance가 처음 동작할 때 같은 경우에) NF Profile이 포함된 NFRegister 메시지를 받아서 등록한다.
 
-NF 또는 SCP가 등록된 _NF/NF Service_에 대한 정보를 얻기 위해 원하는 _NF type_ 정보를 전달하고, 추가로 특정 서비스에 대한 목록이나 slice 정보 등을 제공할 수 있다.
-또한, _NF Set_ 관련 정보를 제공하여 _NF Set_ 내에서 NF Instance를 re-selection 할 수 있게 한다.
+NF 또는 SCP가 등록된 NF/NF Service에 대한 정보를 얻기 위해 원하는 NF type 정보를 전달하고, 추가로 특정 서비스에 대한 목록이나 slice 정보 등을 제공할 수 있다.
+또한, NF Set 관련 정보를 제공하여 NF Set 내에서 NF Instance를 re-selection 할 수 있게 한다.
 
-가입자 데이터에 접근하는 NF(ex, HSS, UDM)의 경우, NRF는 제공된 가입자ID에 해당하는 _NF Group ID_를 확인할 수 있어야 한다.
+가입자 데이터에 접근하는 NF(ex, HSS, UDM)의 경우, NRF는 제공된 가입자ID에 해당하는 NF Group ID를 확인할 수 있어야 한다.
 NRF가 이 정보(가입자ID에 대한 NF그룹ID의 매핑)를 가지고 있지 않다면,
-UDR이 제공하는 _Nudr_GroupIDmap_Query_ 서비스를 이용하여 가입자ID에 해당하는 _NF Group ID_를 조회할 수 있다.
+UDR이 제공하는 _Nudr_GroupIDmap_Query_ 서비스를 이용하여 가입자ID에 해당하는 NF Group ID를 조회할 수 있다.
 
 Indirect Communication 방식에서 NF는 Request 메시지를 타겟에 전달하기 위해 SCP를 이용한다.
 Delegate Discovery 모드로 설정된 NF는 discovery 절차를 생략하고 SCP에 이 절차를 위임한다.
 이때, NF는 SCP가 discovery 및 selection 하는데 필요한 파라미터를 Request 메시지에 포함한다.
-SCP는 NRF를 연동하여 discovery 결과를 얻고, NRF나 UDR을 연동하여 가입자ID에 해당하는 _NF Group ID_를 얻는다.
+SCP는 NRF를 연동하여 discovery 결과를 얻고, NRF나 UDR을 연동하여 가입자ID에 해당하는 NF Group ID를 얻는다.
 
 **NOTE**: SCP는 HSS/UDM에 대한 delegated discovery 시에 NRF에게 사용자 ID를 전달하고 HSS/UDM 인스턴스 그룹 정보를 찾거나
 아니면 UDR에 HSS/UDM Group ID를 질의할 수 있다.
@@ -34,10 +34,10 @@ SCP는 NRF를 연동하여 discovery 결과를 얻고, NRF나 UDR을 연동하�
 
 NRF는 discovery 조건에 해당하는 NF/NF Service Instance 목록을 제공하고,
 NF Instance의 IP주소나 FQDN, NF Service Instance와 관련된 endpoint 주소들을 NF나 SCP에게 제공한다.
-그리고, _NF Set ID_나 _NF Service Set ID_도 제공한다.
+그리고, NF Set ID나 NF Service Set ID도 제공한다.
 discovery 응답에는 제공된 discovery 결과가 캐쉬될 수 있도록 유효기간을 포함한다.
 유효기간 동안에는 조건이 같다면 discovery 결과도 어떤 가입자에게나 동일하므로,
-discovery 응답으로 수신한 _NF Profile_들의 정보는 캐쉬되었다가 NF selection에 사용될 수 있다.
+discovery 응답으로 수신한 NF Profile들의 정보는 캐쉬되었다가 NF selection에 사용될 수 있다.
 
 Direct Communication 방식에서 NF는 discovery 결과를 이용하여 NF/NF Service Instance를 선택한다.
 
@@ -60,8 +60,8 @@ NF 또는 SCP는 NF Profile의 변경(ex, NF Service Instance가 서비스를 �
 새로 등록 및 등록 취소 된 NF Instance에 대한 notification을 수신하기 위해 NRF에 구독 할 수 있다.
 
 여러 PLMN에 걸친 NF/NF Service Discovery의 경우, 로컬 PLMN의 NRF는 원격 PLMN의 NRF와 연동하여
-discovery 조건에 맞는 원격 PLMN의 NF Instance의 _NF Profile_을 검색한다.
-로컬 PLMN의 NRF는 NF가 제공한 _PLMN ID_를 사용하여 타겟 PLMN 특정 쿼리를 만들어서 원격 PLMN의 NRF에 전달한다.
+discovery 조건에 맞는 원격 PLMN의 NF Instance의 NF Profile을 검색한다.
+로컬 PLMN의 NRF는 NF가 제공한 PLMN ID를 사용하여 타겟 PLMN 특정 쿼리를 만들어서 원격 PLMN의 NRF에 전달한다.
 
 ## Binding 과 selection 그리고 re-selection
 
@@ -153,7 +153,7 @@ Indirect Communication을 위해, SCP는 NF와 NF서비스 discovery 및 selecti
 
 - Request message에 Routing Binding Indication이 포함되어 있으면,
 SCP는 해당 서비스 요청메시지를 위의 표에 기술된 대로 요청된 대상에 전송해야 한다.
-Routing Binding Indication이 없으면 SCP는 NRF 또는 자체 설정으로 해당 _NF Set ID_를 얻는다.
+Routing Binding Indication이 없으면 SCP는 NRF 또는 자체 설정으로 해당 NF Set ID를 얻는다.
 - Request message 수신자가 이전에 Binding Indication을 제공했으면,
 Request message 전송자는 이것을 후속 Request message에 Routing Binding Indication으로 포함해야 한다.
 
