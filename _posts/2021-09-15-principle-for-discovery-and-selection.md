@@ -159,6 +159,8 @@ Routing Binding Indication이 없으면 SCP는 NRF 또는 자체 설정으로 �
 - Request message 수신자가 이전에 Binding Indication을 제공했으면,
 Request message 전송자는 이것을 후속 Request message에 Routing Binding Indication으로 포함해야 한다.
 
+<br>
+
 # SCP의 Discovery와 Selection
 
 - NF는 자신의 serving SCP(s)와 함께 구성됩니다.
