@@ -1,5 +1,5 @@
 ---
-title: "NF 및 NF service의 discovery와 selection"
+title: "[5G/SCP] NF 및 NF service의 discovery와 selection"
 date: 2021-09-15
 categories:
   - Tech

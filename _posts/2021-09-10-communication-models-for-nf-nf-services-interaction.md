@@ -1,5 +1,5 @@
 ---
-title: "NF service 연동을 위한 Communication model"
+title: "[5G/SCP] NF service 연동을 위한 Communication model"
 date: 2021-09-10
 categories:
   - Tech

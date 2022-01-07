@@ -1,5 +1,5 @@
 ---
-title: "5G core의 service-based architecture를 위한 Indirect communication"
+title: "[5G/SCP] 5G core의 service-based architecture를 위한 Indirect communication"
 date: 2021-09-05
 categories:
   - Tech

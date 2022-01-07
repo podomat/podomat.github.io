@@ -1,5 +1,5 @@
 ---
-title: "SVN에서 외부 Differencing Tool 사용하기"
+title: "[Subversion] SVN에서 외부 Differencing Tool 사용하기"
 last_modified_at: 2021-05-16
 date: 2021-05-15
 categories:
