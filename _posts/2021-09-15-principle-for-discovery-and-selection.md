@@ -147,7 +147,7 @@ Binding Indication은 다른 서비스들을 가리키는 것으로 적용되어
 |**NF Service Set**|해당 NF Service Set 내의 임의의 NF Service Instance|(가능하면) 해당 NF Set 내의 동등한 NF Service Set 내의 임의의 NF Service Instance (Note 2)|NF Service Set ID, NF Instance ID, NF Set ID, Service Name (NOTE 4)|
 |**NF Instance**|해당 NF Instance 내의 임의의 동등한 NF Service|(가능하면) 해당 NF Set 내의 다른 NF Instance 내의 임의의 동등한 NF Service Instance|NF Instance ID, NF Set ID, Service Name (NOTE 4)|
 |**NF Set**|해당 NF Set 내의 임의의 동등한 NF Service Instance|해당 NF Set 내의 임의의 동등한 NF Service Instance|NF Set ID, Service Name (NOTE 4)|
-|NOTE 1: Binding Indication을 사용할 수없는 경우, NF Consumer는 사용 가능한 라우팅 정보를 기반으로 서비스 Request message를 대상으로 전송한다.<br>NOTE 2: 다른 NF들의 NF Service Set은 NF Service의 타입 및 Variant(예: 동일한 NF Service Set ID)가 동일한 경우 같은 것으로 간주된다.<br>NOTE 3: Routing Binding Indication을 사용할 수 없는 경우, SCP는 사용 가능한 라우팅 정보를 기반으로 서비스 Request를 대상으로 전송한다.<br>NOTE 4: Binding Indication이 Notification 대상과 관련이 있거나 NF Consumer로서의 NF가 NF가 생성하는 서비스에 대한 Binding Indication을 제공하는 경우에만 서비스 이름이 적용된다.|
+|NOTE 1: Binding Indication을 사용할 수없는 경우, NF Consumer는 사용 가능한 라우팅 정보를 기반으로 서비스 Request message를 대상으로 전송한다.<br>NOTE 2: 다른 NF들의 NF Service Set은 NF Service의 타입 및 Variant(예: 동일한 NF Service Set ID)가 동일한 경우 같은 것으로 간주된다.<br>NOTE 3: Routing Binding Indication을 사용할 수 없는 경우, SCP는 사용 가능한 라우팅 정보를 기반으로 서비스 Request를 대상으로 전송한다.<br>NOTE 4: Binding Indication이 Notification 대상과 관련이 있거나 NF Consumer로서의 NF가 NF가 생성하는 서비스에 대한 Binding Indication을 제공하는 경우에만 서비스 이름이 적용된다.||||
 
 ## Indirect communication의 Discovery와 Selection
 
@@ -169,7 +169,9 @@ NRF가 제공하는 Nnrf_NFDiscovery 서비스를 조회하거나 또는 next SC
 NRF는 조회 요청된 discovery 파라미터 별로 SCP profile 목록을 리턴합니다.
 SCP가 Routing Binding Indication이 포함된 서비스나 notification에 대한 요청 메시지를 수신하고 이것을 다시 next hop SCP에 전달하고자 하면,
 전달하는 요청 메시지에 Routing Binding Indication을 반드시 포함시켜야 합니다.
+
 **NOTE**: SCP가 NRF로 부터 수신한 정보를 이용하여 producer에 대한 최적 경로를 찾는 방법은 SCP의 구현, 배포별 구성 및 운영자 정책에 따라 달라진다.
 {: .notice}
+
 - SCP 구성에 따라 SCP가 next hop SCP에게 서비스 요청 메시지를 전달하기로 결정했다면,
 다음 SCP에게 NF 또는 서비스 인스턴스의 selection도 위임하고 이를 위한 discovery 및 selection 파라미터를 제공해야 합니다.
