@@ -135,7 +135,7 @@ Binding Indication은 다른 서비스들을 가리키는 것으로 적용되어
 요청 또는 구독 메시지에 적용성이 표시되지 않은 경우,
 해당 메시지의 Binding Indication은 구독 관련 이벤트를 제외한 모든 이벤트의 Notification에 적용됩니다.
 
-**NOTE**: 이러한 요청 메시지는 묵시적 구독으로 사용할 수 있습니다.
+**NOTE**: 이러한 요청 메시지는 묵시적 구독으로 사용할 수 있습니다.<br>
 **NOTE**: 요청 메시지는 서비스 및 Notification에 대한 Binding Indication과 (Indirect Communication의 경우) Routing Binding Indication을 모두 포함할 수 있습니다.
 {: .notice}
 
