@@ -8,7 +8,7 @@ tags:
   - SCP
 ---
 
-NF(Network Function) 또는 SCP(Service Communication Proxy)는 연동할 특정 타입 NF의 Service Instance를 찾기 위해 NRF(Network Repository Function)가 제공하는 _NF/NF Service Discovery_ 를 이용한다.
+NF 또는 SCP는 연동할 특정 타입 NF의 Service Instance를 찾기 위해 NRF가 제공하는 _NF/NF Service Discovery_ 를 이용한다.
 
 **NOTE:** NRF는 SCP와 함께 위치할 수 있다.
 {: .notice}
@@ -21,14 +21,14 @@ NF 또는 SCP가 등록된 NF/NF Service에 대한 정보를 얻기 위해 원�
 
 가입자 데이터에 접근하는 NF(ex, HSS, UDM)의 경우, NRF는 제공된 가입자ID에 해당하는 NF Group ID를 확인할 수 있어야 한다.
 NRF가 이 정보(가입자ID에 대한 NF그룹ID의 매핑)를 가지고 있지 않다면,
-UDR(Unified Data Repository)이 제공하는 _Nudr_GroupIDmap_Query_ 서비스를 이용하여 가입자ID에 해당하는 NF Group ID를 조회할 수 있다.
+UDR이 제공하는 _Nudr_GroupIDmap_Query_ 서비스를 이용하여 가입자ID에 해당하는 NF Group ID를 조회할 수 있다.
 
 Indirect Communication 방식에서 NF는 Request 메시지를 타겟에 전달하기 위해 SCP를 이용한다.
 Delegate Discovery 모드로 설정된 NF는 discovery 절차를 생략하고 SCP에 이 절차를 위임한다.
 이때, NF는 SCP가 discovery 및 selection 하는데 필요한 파라미터를 Request 메시지에 포함한다.
 SCP는 NRF를 연동하여 discovery 결과를 얻고, NRF나 UDR을 연동하여 가입자ID에 해당하는 NF Group ID를 얻는다.
 
-**NOTE**: SCP는 HSS(Home Subscriber Server)/UDM(Unified Data Management)에 대한 delegated discovery 시에 NRF에게 사용자 ID를 전달하고 HSS/UDM 인스턴스 그룹 정보를 찾거나
+**NOTE**: SCP는 HSS/UDM에 대한 delegated discovery 시에 NRF에게 사용자 ID를 전달하고 HSS/UDM 인스턴스 그룹 정보를 찾거나
 아니면 UDR에 HSS/UDM Group ID를 질의할 수 있다.
 {: .notice}
 
@@ -49,7 +49,7 @@ Delegated Discovery가 없는 Indirect Communication 방식에서 NF는 discover
 
 Delegated Discovery를 사용한 Indirect Communication 방식에서
 SCP는 NF가 제공한 discovery 및 selection 파라미터를 기반으로 필요하다면 NRF와 연동하여 적절한 NF/NF Service Instance를 검색하고 선택한다.
-사용될 NRF는 NF Consumer가 discovery 파라미터의 일부로 제공할 수 있다. (NSSF(Network Slice Selection Function) 쿼리의 결과 등으로 얻어짐)
+사용될 NRF는 NF Consumer가 discovery 파라미터의 일부로 제공할 수 있다. (NSSF 쿼리의 결과 등으로 얻어짐)
 SCP는 subsequent selection을 위해 캐쉬된 discovery 결과를 사용할 수 있다.
 즉, SCP가 selection을 수행하기 위해 discovery 절차를 다시 수행할 필요가 없다.
 
@@ -177,9 +177,3 @@ SCP가 Routing Binding Indication이 포함된 서비스나 notification에 대�
 다음 SCP에게 NF 또는 서비스 인스턴스의 selection도 위임하고 이를 위한 discovery 및 selection 파라미터를 제공해야 한다.
 
 Ref: [_3GPP TS 23.501 System architecture for the 5G System (5GS)_](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=3144)
-
----
-
-[<a name="footnote_1">1</a>] Network Function<br>
-[<a name="footnote_2">2</a>] Service Communication Proxy<br>
-[<a name="footnote_3">3</a>] Network Repository Function<br>
