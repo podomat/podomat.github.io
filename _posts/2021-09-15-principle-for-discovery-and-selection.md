@@ -8,7 +8,7 @@ tags:
   - SCP
 ---
 
-NF[<sub>1(#footnote_1)</sub>] 또는 SCP[<sub>2(#footnote_2)</sub>]는 연동할 특정 타입 NF의 Service Instance를 찾기 위해 NRF[<sub>2(#footnote_2)</sub>]가 제공하는 _NF/NF Service Discovery_ 를 이용한다.
+NF<sub>[[1]](#footnote_1)</sub> 또는 SCP<sub>[[2]](#footnote_2)</sub>는 연동할 특정 타입 NF의 Service Instance를 찾기 위해 NRF<sub>[[2]](#footnote_2)</sub>가 제공하는 _NF/NF Service Discovery_ 를 이용한다.
 
 **NOTE:** NRF는 SCP와 함께 위치할 수 있다.
 {: .notice}
@@ -178,8 +178,6 @@ SCP가 Routing Binding Indication이 포함된 서비스나 notification에 대�
 
 Ref: [_3GPP TS 23.501 System architecture for the 5G System (5GS)_](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=3144)
 
-[<a name="footnote_1">1</a>] Network Function
-
-[<a name="footnote_2">2</a>] Service Communication Proxy
-
-[<a name="footnote_3">3</a>] Network Repository Function
+[<a name="footnote_1">1</a>] Network Function<br>
+[<a name="footnote_2">2</a>] Service Communication Proxy<br>
+[<a name="footnote_3">3</a>] Network Repository Function<br>
