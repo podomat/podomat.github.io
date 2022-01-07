@@ -8,7 +8,7 @@ tags:
   - SCP
 ---
 
-### General
+## General
 
 NF 또는 SCP는 연동할 특정 타입 NF의 Service Instance를 찾기 위해 NRF가 제공하는 `NF/NF Service Discovery`를 이용합니다.
 
@@ -64,4 +64,23 @@ NF 또는 SCP는 NF Profile의 변경(ex, NF Service Instance가 서비스를 �
 여러 PLMN에 걸친 NF/NF Service Discovery의 경우, 로컬 PLMN의 NRF는 원격 PLMN의 NRF와 연동하여
 discovery 조건에 맞는 원격 PLMN의 NF Instance의 NF Profile을 검색합니다.
 로컬 PLMN의 NRF는 NF가 제공한 PLMN ID를 사용하여 타겟 PLMN 특정 쿼리를 만들어서 원격 PLMN의 NRF에 전달합니다.
+
+## Binding 과 Selection 그리고 Re-selection
+
+Binding은 NF Service Instance의 Selection, Reselection을 위한 적절한 타겟 NF Producer Instance를 지정하여,
+특정 NF Producer의 자원(context)과 NF Service에 연관된 후속 request 메시지를 전달하기 위해 사용될 수 있습니다.
+이를 통해 NF Producer는 (내부 정책 등의 기준에 따라) NF Consumer가 특정 Context에 대해서
+NF Service Instance, NF Instance, NF Service Set 또는 NF Set에 바인딩 되어야 함을 나타낼 수 있습니다.
+
+Binding은 또한 적절한 Notification 대상 NF Consumer Instance가 reselection 되도록 NF Consumer가 사용할 수 있고,
+특정 Notification 구독에 연관된 후속 Notification 요청 메시지를 전달하고,
+NF Service Producer가 후속 메시지를 보낼 가능성이 있는 경우,
+해당 data context에 대해서 NF Consumer가 Producer가 되는 Service에 대한 Binding Indication을 제공합니다.
+
+Routing Binding Indication은 Subscribe/Notification 요청 메시지에 포함될 수 있습니다.
+이것은 SCP가 메시지를 전달하는 Indirect Communication 방식에서 사용될 수 있습니다.
+Routing Binding Indication은 Binding Indication의 복사본입니다.
+
+**NOTE**: Subscribe 요청 메시지는 Binding Indication과 Routing Binding Indication을 모두 포함할 수 있습니다.
+{: .notice}
 
