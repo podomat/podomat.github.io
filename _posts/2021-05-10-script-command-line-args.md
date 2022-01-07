@@ -12,6 +12,8 @@ tags:
 
 shell script 작성시 유저에게 command line argument를 입력받아서 처리하는 코드는 다음과 같이 작성할 수 있다.
 
+<br>
+
 _**<span class="order-box">1</span>Positional Parameters**_
 
 argument가 전달된 순서에 따라 스크립트내에서 인덱스를 통해 접근할 수 있다. 첫 번째 argument는 `$1`, 두 번째 것은 `$2`와 같은 식이다. 즉, 해당 argument의 입력된 위치로 표현하는 것이다.<br>
@@ -78,8 +80,10 @@ do
     i=$((i + 1));
 done
 ```
+
 위 스크립트를 다음과 같이 실행해보자. 
 argument를 몇개를 넘기든 항상 첫번째 argument부터 마지막 argument까지 순서대로 출력하게 될 것이다.
+
 ```
 $ sh users-loop.sh john matt bill 'joe wicks' carol
 Username - 1: john
@@ -119,10 +123,9 @@ Username - 4: joe wicks
 Username - 5: carol
 ```
 
-<br>
-간단히 정리해보면,<br>
+간단히 정리해보면,
 - positional parameter는 argument의 개수와 순서를 미리 알 수 있을때 사용된다.
 - flag를 사용하면 argument의 순서는 상관이 없게 된다.
 - loop construct는 argument의 개수를 알 수 없을 때 편리하다.
-<br>
+
 Ref: [_How to Use Command Line Arguments in a Bash Script_](https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script)
