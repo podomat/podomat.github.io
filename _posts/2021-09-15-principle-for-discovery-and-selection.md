@@ -143,8 +143,6 @@ Binding Indication은 다른 서비스들을 가리키는 것으로 적용되어
 
 |Level of Binding Indication|The NF Consumer / Notification sender / SCP selects|The NF Consumer / Notification sender / SCP can reselect e.g. when selected producer is not available|Binding information for selection and re-selection|
 |---|---|---|---|
-|**NF Service Instance**|해당 NF Service Instance|(가능하면) 해당 NF Service Set 내의 동등한 NF Service Instance
-해당 NF Instance 내의 동등한 NF Service Instance
-(가능하면) 해당 NF Set 내의 동등한 NF Service Instance|NF Service Instance ID, NF Service Set ID, NF Instance ID, NF Set ID, Service Name (NOTE 4)|
+|**NF Service Instance**|해당 NF Service Instance|(가능하면) 해당 NF Service Set 내의 동등한 NF Service Instance<br>해당 NF Instance 내의 동등한 NF Service Instance<br>(가능하면) 해당 NF Set 내의 동등한 NF Service Instance|NF Service Instance ID, NF Service Set ID, NF Instance ID, NF Set ID, Service Name (NOTE 4)|
 |**NF Service Set**|해당 NF Service Set 내의 임의의 NF Service Instance|(가능하면) 해당 NF Set 내의 동등한 NF Service Set 내의 임의의 NF Service Instance (Note 2)|NF Service Set ID, NF Instance ID, NF Set ID, Service Name (NOTE 4)|
 
