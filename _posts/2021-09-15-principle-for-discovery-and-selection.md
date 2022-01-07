@@ -177,3 +177,5 @@ SCP가 Routing Binding Indication이 포함된 서비스나 notification에 대�
 
 - SCP 구성에 따라 SCP가 next hop SCP에게 서비스 요청 메시지를 전달하기로 결정했다면,
 다음 SCP에게 NF 또는 서비스 인스턴스의 selection도 위임하고 이를 위한 discovery 및 selection 파라미터를 제공해야 합니다.
+
+Ref: [_3GPP TS 23.501 System architecture for the 5G System (5GS)_](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=3144)
