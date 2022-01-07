@@ -96,8 +96,7 @@ NF Service Consumer는 Binding Indication을 Request나 Subscribe 메시지의 R
 
 묵시적/명시적 Notification 구독 중에, NF Service Consumer는 NF Service Producer에게 Binding Indication 및 Notification Endpoint를 제공할 수 있습니다.
 NF Service Consumer는 Notification 응답에도 Binding Indication을 제공할 수 있습니다.
-NF Service Consumer가 NF Service Producer에게 제공하는 Binding Indication Level은 Notification Endpoint가
-표 6.3.1.0-1에 기술된 대로 NF Service Instance, NF Instance, NF Service Set, NF Set에 바인딩 되어 있는지 여부를 나타냅니다.
+NF Service Consumer가 NF Service Producer에게 제공하는 Binding Indication Level은 Notification Endpoint가 NF Service Instance, NF Instance, NF Service Set, NF Set 중 어디에 바인딩 되어 있는지를 나타냅니다.
 Binding Indication은 NF Set ID, NF Instance ID, NF Service Set ID, NF Service Instance ID 중에 적어도 하나를 포함해야 하고 Service Name도 포함할 수 있습니다. 
 NF Service Set ID, NF Service Instance ID, Service Name은 NF Service Consumer에서 Notification을 처리할 서비스와 관련이 있습니다.
 
@@ -154,7 +153,7 @@ Binding Indication은 다른 서비스들을 가리키는 것으로 적용되어
 Indirect Communication을 위해, SCP는 NF와 NF서비스 discovery 및 selection 과 관련하여 다음 기능을 수행합니다.
 
 - Request message에 Routing Binding Indication이 포함되어 있으면,
-SCP는 해당 서비스 요청메시지를 Table 6.3.1.0-1에 기술된 대로 요청된 대상에 전송해야 합니다.
+SCP는 해당 서비스 요청메시지를 위의 표에 기술된 대로 요청된 대상에 전송해야 합니다.
 Routing Binding Indication이 없으면 SCP는 NRF 또는 자체 설정으로 해당 NF Set ID를 얻는다.
 - Request message 수신자가 이전에 Binding Indication을 제공했으면,
 Request message 전송자는 이것을 후속 Request message에 Routing Binding Indication으로 포함해야 한다.
