@@ -113,3 +113,38 @@ Binding Indication에 의해 선택된 NF들에 NF Profile 레벨의 NRF에 등�
 - Binding Indication에 Service Name이 포함되어 있으면, Binding Indication에 의해 선택된 NF Profile들에
 해당 서비스의 NRF에 등록된 endpoint 주소를 사용하여 새로운 Notification Endpoint를 만들어야 합니다.
 
+Indirect Communication에서 NF Service Producer는 SCP가 대체 endpoint 주소를 검색하여 Notification Endpoint를 만들 수 있도록 하기 위해
+Binding Indication을 Notification 요청 메시지에 포함되는 Routing Binding Indication에 복사합니다.
+예를 들어, Request target인 Notification Endpoint에 접속이 되지 않으면 다음과 같이 동작합니다.
+
+- Routing Binding Indication에서 Service Name이 생략되고 notification의 binding이 NF Set이나 NF Instance 레벨이면, 
+Binding Indication에 의해 선택된 NF들에 NF Profile 레벨의 NRF에 등록된 endpoint 주소를 사용하여 새로운 Notification Endpoint를 만들어야 합니다.
+- Routing Binding Indication에 Service Name이 포함되어 있으면, Binding Indication에 의해 선택된 NF Profile들에
+해당 서비스의 NRF에 등록된 endpoint 주소를 사용하여 새로운 Notification Endpoint를 만들어야 합니다.
+
+다른 Network Function을 통한 Notification Subscription의 경우,
+Subscription 관련 이벤트에 대한 별도의 Binding Indication이 NF Service Consumer에 의해 제공될 수 있으며
+제공되는 경우 이벤트 관련 구독에 대한 알림을 나타내도록 적용할 수 있어야 합니다.
+NF Consumer 로서의 NF가 서비스 요청 메시지에 Produce하는 서비스에 대한 Binding Indicator를 제공하면, 
+Binding Indication은 다른 서비스들을 가리키는 것으로 적용되어야 하고 관련된 서비스 이름들을 포함합니다.
+그 밖에 나머지 파라미터들은 아래 표에 리스트되어 있습니다.
+만약, 서비스 이름이 제공되지 않으면, Binding Indication은 해당 NF가 제공하는 모든 서비스에 해당됩니다.
+
+바인딩의 NF Set 또는 NF Instance Level의 경우, Notification 및 기타 서비스에 대한 Binding Indication은 이것들이 동일한 서비스에 대한 것이라면 결합 될 수 있으며,
+결합된 Binding Indication은 Binding Indication과 관련된 모든 시나리오를 나타내는 적용성과 연관되어야 합니다. (이를 위해 적용성은 값의 조합으로 나타낼 수 있습니다.)
+요청 또는 구독 메시지에 적용성이 표시되지 않은 경우,
+해당 메시지의 Binding Indication은 구독 관련 이벤트를 제외한 모든 이벤트의 Notification에 적용됩니다.
+
+**NOTE**: 이러한 요청 메시지는 묵시적 구독으로 사용할 수 있습니다.
+**NOTE**: 요청 메시지는 서비스 및 Notification에 대한 Binding Indication과 (Indirect Communication의 경우) Routing Binding Indication을 모두 포함할 수 있습니다.
+{: .notice}
+
+다음 표는 NF Service Producer가 제공하는 Binding Indicator에 따른 NF Service Consumer 및 SCP의 selection/reselection 동작을 정의합니다.
+
+|Level of Binding Indication|The NF Consumer / Notification sender / SCP selects|The NF Consumer / Notification sender / SCP can reselect e.g. when selected producer is not available|Binding information for selection and re-selection|
+|---|---|---|---|
+|**NF Service Instance**|해당 NF Service Instance|(가능하면) 해당 NF Service Set 내의 동등한 NF Service Instance
+해당 NF Instance 내의 동등한 NF Service Instance
+(가능하면) 해당 NF Set 내의 동등한 NF Service Instance|NF Service Instance ID, NF Service Set ID, NF Instance ID, NF Set ID, Service Name (NOTE 4)|
+|**NF Service Set**|해당 NF Service Set 내의 임의의 NF Service Instance|(가능하면) 해당 NF Set 내의 동등한 NF Service Set 내의 임의의 NF Service Instance (Note 2)|NF Service Set ID, NF Instance ID, NF Set ID, Service Name (NOTE 4)|
+
