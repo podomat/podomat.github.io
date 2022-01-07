@@ -146,10 +146,10 @@ Binding Indication은 다른 서비스들을 가리키는 것으로 적용되어
 |**NF Service Set**|해당 NF Service Set 내의 임의의 NF Service Instance|(가능하면) 해당 NF Set 내의 동등한 NF Service Set 내의 임의의 NF Service Instance (Note 2)|NF Service Set ID, NF Instance ID, NF Set ID, Service Name (NOTE 4)|
 |**NF Instance**|해당 NF Instance 내의 임의의 동등한 NF Service|(가능하면) 해당 NF Set 내의 다른 NF Instance 내의 임의의 동등한 NF Service Instance|NF Instance ID, NF Set ID, Service Name (NOTE 4)|
 |**NF Set**|해당 NF Set 내의 임의의 동등한 NF Service Instance|해당 NF Set 내의 임의의 동등한 NF Service Instance|NF Set ID, Service Name (NOTE 4)|
-||111kkk2dsfsadfgsadgadgfdsfdsafsadfdsagasdfdsafsda22|||
-
-|NOTE 1: Binding Indication을 사용할 수없는 경우, NF Consumer는 사용 가능한 라우팅 정보를 기반으로 서비스 Request message를 대상으로 전송한다.<br>NOTE 2: 다른 NF들의 NF Service Set은 NF Service의 타입 및 Variant(예: 동일한 NF Service Set ID)가 동일한 경우 같은 것으로 간주된다.<br>NOTE 3: Routing Binding Indication을 사용할 수 없는 경우, SCP는 사용 가능한 라우팅 정보를 기반으로 서비스 Request를 대상으로 전송한다.<br>NOTE 4: Binding Indication이 Notification 대상과 관련이 있거나 NF Consumer로서의 NF가 NF가 생성하는 서비스에 대한 Binding Indication을 제공하는 경우에만 서비스 이름이 적용된다.||||
 [Binding, selection and reselection]
+
+NOTE 1: Binding Indication을 사용할 수없는 경우, NF Consumer는 사용 가능한 라우팅 정보를 기반으로 서비스 Request message를 대상으로 전송한다.<br>NOTE 2: 다른 NF들의 NF Service Set은 NF Service의 타입 및 Variant(예: 동일한 NF Service Set ID)가 동일한 경우 같은 것으로 간주된다.<br>NOTE 3: Routing Binding Indication을 사용할 수 없는 경우, SCP는 사용 가능한 라우팅 정보를 기반으로 서비스 Request를 대상으로 전송한다.<br>NOTE 4: Binding Indication이 Notification 대상과 관련이 있거나 NF Consumer로서의 NF가 NF가 생성하는 서비스에 대한 Binding Indication을 제공하는 경우에만 서비스 이름이 적용된다.
+{: .notice}
 
 ## Indirect communication의 Discovery와 Selection
 
