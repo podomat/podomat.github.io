@@ -9,4 +9,4 @@ tags:
   - deadlock
 ---
 
-얼마전 지역 운용실에서 vendor의 신규 장비 인수시험 도중에 가상화NF의 lifecycle을 관리하는 시스템이 lifecycle operation 수행 도중에 500 Internal을 리턴하고 실패되는 케이스가 발생했다.
+얼마 전 사이트 운용실에서 vendor의 신규 장비 인수시험 중에 가상화NF의 lifecycle을 관리하는 시스템이 lifecycle operation을 수행하다가 '500 Internal Server Error'를 리턴하고 실패되는 케이스가 발생했다.
